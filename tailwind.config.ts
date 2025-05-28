@@ -64,10 +64,12 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
+				lg: 'var(--radius)', /* PRD: default rounded-lg, uses --radius (0.5rem) */
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+      /* PRD typography.primaryFont: "sans-serif" is handled by Tailwind's default. No specific font family to extend. */
+      /* PRD effects.shadows.default: "shadow-md" is a Tailwind utility. No custom shadow extension needed. */
 			keyframes: {
 				'accordion-down': {
 					from: {
