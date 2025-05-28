@@ -4,54 +4,49 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 204 61% 15%; /* PRD: #0F2C3F (Page Background) */
+    --foreground: 210 40% 98%; /* Default text on dark page background (Light) */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* PRD: #FFFFFF (Surface/Card Background) */
+    --card-foreground: 210 10% 15%; /* PRD: #212529 (Primary Text on Card) */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* Assumed same as card */
+    --popover-foreground: 210 10% 15%; /* Assumed same as card-foreground */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 185 100% 41%; /* PRD: #00C2D1 (Primary Button) */
+    --primary-foreground: 0 0% 100%; /* PRD: Button text white #FFFFFF */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96.1%; /* Kept existing: For secondary elements on card (light gray bg) */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Kept existing: Text for secondary elements on card (dark text) */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96.1%; /* Kept existing: For muted elements on card (light gray bg) */
+    --muted-foreground: 227 10% 69%; /* PRD: #878A99 (Secondary Text) */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%; /* Kept existing: For accent elements on card (light gray bg) */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Kept existing: Text for accent elements on card (dark text) */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Kept existing: For destructive elements on card */
+    --destructive-foreground: 210 40% 98%; /* Kept existing: Text for destructive */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 11% 92%; /* PRD: #E9EBEC (Border) */
+    --input: 210 11% 92%; /* PRD: #E9EBEC (Input Border, same as Border) */
+    --ring: 222.2 84% 4.9%; /* Kept existing: Default focus ring (dark blue) */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* PRD: Implied by rounded-lg and 0.5rem note */
 
+    /* Existing sidebar variables - preserved as PRD doesn't specify */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
+    /* Existing dark mode variables - preserved as PRD doesn't specify dark mode overrides */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -97,5 +92,9 @@
 
   body {
     @apply bg-background text-foreground;
+    /* PRD typography.primaryFont: sans-serif is handled by Tailwind's default font stack */
+    /* Additional global styles if needed, e.g., font smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
